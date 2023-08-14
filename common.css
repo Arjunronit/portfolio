@@ -1,0 +1,568 @@
+body {
+    font-family: 'GrandHaven';
+    background: #161616;
+    background-size: cover !important;
+
+    height: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow: auto !important;
+
+
+    cursor: none !important;
+}
+
+.custom-cursor {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    width: 80px;
+    margin-left: -40px;
+    margin-top: -40px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: #ffcd84;
+    transition-property: transform, scale, opacity;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out;
+    scale: 0.3;
+    z-index: 10000;
+}
+
+.custom-cursor--link {
+    scale: 1;
+}
+
+.custom-cursor--init {
+    opacity: 1;
+}
+
+
+.description-box {
+    position: relative !important;
+    z-index: 3;
+    color: #fff;
+    margin: auto;
+    margin-bottom: 30px;
+    width: clamp(300px, 85vw, 1200px);
+    /* Use viewport width units for better responsiveness */
+    text-align: left;
+    font-family: 'Montserrat';
+    font-size: clamp(14px, 1vw, 18px);
+    box-sizing: border-box;
+    transition: opacity 0.8s cubic-bezier(0, 0.02, 0, 1);
+    text-shadow: none !important;
+
+    margin-top: 40px;
+    border: 4px solid #FFCD84;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+
+.sketchfab-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    padding: 10px;
+    grid-gap: 20px;
+}
+
+.sketchfab-embed-wrapper {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    /* for a 16:9 aspect ratio */
+    position: relative;
+}
+
+.sketchfab-embed-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.sketchfab-description {
+    padding: 10px;
+    text-align: center;
+}
+
+.sketchfab-description h3 {
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Bungee';
+}
+
+.sketchfab-description p {
+    color: #666;
+    font-size: 14px;
+    font-family: 'Montserrat';
+}
+
+.project {
+    margin-top: 40px;
+    border: 4px solid #FFCD84;
+    /* Adjust the color as needed */
+    border-radius: 20px;
+    padding: 20px;
+    /* Optional: Add some space between the border and the content */
+    margin-bottom: 40px;
+    /* Add some space between projects */
+}
+
+h2 {
+    font-family: 'Bungee';
+    font-weight: 100;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-family: 'Montserrat';
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 150%;
+}
+
+
+
+
+
+
+
+
+.calendar-container {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: auto;
+}
+
+.calendar {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 500px;
+    background-color: #222222;
+    border: 3px solid #FFCD84;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.calendar .month {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.calendar .weekdays,
+.calendar .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+}
+
+.calendar .weekdays div {
+    font-weight: bold;
+    padding: 5px;
+}
+
+.calendar .days .day {
+    padding: 5px;
+    margin: 1px;
+    border-radius: 5px;
+    transition: all 0.3s;
+    position: relative;
+    /* Required for tooltip positioning */
+}
+
+.calendar .days .day:hover {
+    background-color: #FFCD84;
+    transform: scale(1.4);
+}
+
+.calendar .days .day.event-day {
+    border: 2px solid #FFCD84;
+}
+
+.calendar .days .day .event {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 200px;
+    text-align: left;
+}
+
+.calendar .days .day:hover .event {
+    display: block;
+}
+
+.event-detail {
+    flex-grow: 1;
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+.custom-cursor {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    width: 80px;
+    margin-left: -40px;
+    margin-top: -40px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: #FFCD84;
+    transition-property: transform, scale, opacity;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out;
+    scale: 0.3;
+    z-index: 10000;
+}
+
+.custom-cursor--link {
+    scale: 1;
+}
+
+.custom-cursor--init {
+    opacity: 1;
+}
+
+@font-face {
+    font-family: 'GrandHaven';
+    src: url(fonts/GrandHaven_ttf.ttf) format("truetype");
+}
+
+a {
+    color: #FFCD84;
+    text-decoration: underline;
+    cursor: none !important;
+}
+
+b {
+    font-family: 'Bungee';
+    font-size: large;
+    font-weight: 100;
+}
+
+.link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    cursor: none !important;
+}
+
+.header>.name {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.description-box {
+    text-align: left !important;
+}
+
+/* For webkit-based browsers */
+.description-box::-webkit-scrollbar {
+    width: 10px;
+    /* Adjust scrollbar width */
+    background-color: #00000000;
+    /* Adjust scrollbar track background color */
+}
+
+.description-box::-webkit-scrollbar-thumb {
+    background-color: #A9A9A9;
+    /* Adjust scrollbar thumb color */
+    border-radius: 5px;
+    /* Adjust scrollbar thumb border-radius */
+}
+
+.description-box::-webkit-scrollbar-thumb:hover {
+    background-color: #808080;
+    /* Adjust scrollbar thumb color on hover */
+}
+
+.image {
+    height: 70vh;
+    width: 100%;
+    object-fit: cover !important;
+    border-radius: 5px;
+}
+
+.name {
+    text-align: center;
+    font-size: 120px;
+    color: #FFCD84;
+    margin: auto;
+    width: 70%;
+    position: relative;
+    padding-top: 28px !important;
+    z-index: 4;
+}
+
+.description {
+    font-family: 'Bungee';
+    text-align: center;
+    font-size: 20px;
+    color: #ffffff;
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-shadow: none !important;
+}
+
+.layout {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 90px;
+    width: 10px;
+    height: 100%;
+}
+
+.layout:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100%;
+    border: 2px solid #FFCD84;
+    border-top: none;
+    border-bottom: none;
+    opacity: 0.15;
+}
+
+.layout .box {
+    position: fixed;
+    bottom: 20px;
+    /* 20px from the bottom */
+    left: 30px;
+    color: #FFCD84;
+    transform-origin: 0% 10%;
+    transform: rotate(-90deg);
+    font-family: 'GrandHaven';
+    font-size: 9px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    opacity: 0.4;
+}
+
+.image-logo {
+    position: absolute;
+    z-index: 2;
+    top: 28px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Bungee';
+    pointer-events: all;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    overflow: hidden;
+    padding-bottom: 0.1em;
+}
+
+.social-media-icons {
+    position: fixed;
+    bottom: 30px;
+    /* Adjust the distance from the bottom edge */
+    right: 30px;
+    /* Adjust the distance from the right edge */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 100;
+    /* Ensure the icons appear above other elements */
+}
+
+.social-media-icons a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.social-media-icons i {
+    font-size: 32px;
+}
+
+.header {
+    display: flex;
+}
+
+.clickable {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+h4 {
+    font-family: 'GrandHaven';
+    color: #FFCD84;
+    font-size: 24px;
+}
+
+
+@media screen and (max-width: 1600px) {
+
+    .image-logo {
+        display: none !important;
+    }
+
+    .image {
+        height: 30vh;
+    }
+
+    .sketchfab-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0px 20px 10px 20px;
+        padding: 10px;
+        grid-gap: 20px;
+    }
+
+    .name {
+        text-align: center;
+        font-size: 8vw;
+        color: #FFCD84;
+        margin: auto;
+        position: relative;
+        padding-top: 28px !important;
+        z-index: 4;
+    }
+
+    .description {
+        margin: auto;
+        font-size: 30%;
+        color: #fff;
+        position: relative;
+        text-align: center;
+        padding-top: 8px;
+        text-shadow: none !important;
+    }
+
+    .header>.name,
+    .title,
+    .num {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .layout {
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    .layout .box {
+        display: none !important;
+    }
+
+    .layout:before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 50px;
+        width: 10px;
+        height: 100%;
+        border: 1px solid #212121;
+        border-top: none;
+        border-bottom: none;
+        opacity: 0.15;
+    }
+
+    .social-media-icons {
+        display: none !important;
+    }
+}
+
+@media (max-width: 800px) {
+    .sketchfab-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        padding: 0;
+        margin: 0;
+        grid-gap: 0;
+    }
+
+    .name {
+        width: 90%;
+    }
+
+    .custom-cursor {
+        display: none !important;
+    }
+
+    body {
+        cursor: auto !important;
+    }
+}
+
+.social-media-icons {
+    position: fixed;
+    bottom: 30px;
+    /* Adjust the distance from the bottom edge */
+    right: 30px;
+    /* Adjust the distance from the right edge */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 100;
+    /* Ensure the icons appear above other elements */
+}
+
+.social-media-icons a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.social-media-icons i {
+    font-size: 32px;
+}
